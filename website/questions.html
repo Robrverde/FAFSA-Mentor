@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+    <title>FAFSA Mentor</title>
+    <meta name="description" content="Our first page">
+    </head>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+    <body>
+        <h1>General Questions</h1>
+        <input id='search' onkeyup='searchTable()' type='text' placeholder="Type to search">
+        <br>
+        <br>
+        <table id="table">
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <th>What is FAFSA?</th>
+                <td>The Free Application for Federal Student Aid (FAFSA) is a form used by the U.S. Department of Education to determine a student's eligibility for federal student aid, which can include grants, loans, and work-study programs.</td>
+            </tr>
+            <tr>
+                <th>Why should I apply for the FAFSA?</th>
+                <td>By submitting the FAFSA, students can access a range of financial aid options to help pay for their education and reduce their overall debt. It's a crucial step for anyone looking to pursue higher education and a valuable resource for students in need of financial assistance.</td>
+            </tr>
+            <tr>
+                <th>Who is eligible to complete the FAFSA?</th>
+                <td>U.S. citizens, eligible non-citizens, and permanent residents who are seeking federal financial aid for higher education are eligible to complete the FAFSA.</th>
+            </tr>
+            <tr>
+                <th>What information is required to complete the FAFSA?</th>
+                <td>To complete the FAFSA, you'll need information about yourself and your family, including your Social Security number, high school diploma or GED, if you're a first-time college student tax returns, W-2 forms, and other records of money earned. You'll also need information about the schools you're interested in attending.</td>
+            </tr>
+            <tr>
+                <th>When is the deadline to submit the FAFSA?</th>
+                <td>The deadline for submitting the FAFSA varies by state but is generally around June 30th of each year. It's recommended that you submit the FAFSA as soon as possible, as aid is awarded on a first-come, first-served basis.</td>
+            </tr>
+            <tr>
+                <th>When is the best time to submit the FAFSA?</th>
+                <td>You can submit the FAFSA as soon as October 1st of each year. It's recommended that you submit the FAFSA as soon as possible, as aid is awarded on a first-come, first-served basis.</th>
+            </tr>
+            <tr>
+                <th>What happens after I submit the FAFSA?</th>
+                <td>After you submit the FAFSA, the Department of Education will process your application and determine your eligibility for federal student aid. You'll receive a Student Aid Report (SAR) that summarizes the information you provided on the FAFSA and will also receive an award letter from the schools you listed on the FAFSA that summarizes the aid you're eligible to receive.</td>
+            </tr>
+            <tr>
+                <th>How do I update or correct my FAFSA?</th>
+                <td>You can make corrections to your FAFSA by logging in to the Federal Student Aid website and making the necessary changes. It's important to correct any errors on your FAFSA as soon as possible, as errors can delay the processing of your application and impact the amount of aid you receive.</td>
+            </tr>
+            <tr>
+                <th>Do I have to be enrolled full-time to be eligible for federal financial aid?</th>
+                <td>No, you do not have to be enrolled full-time to be eligible for federal financial aid. Part-time students may also be eligible for certain types of aid, such as loans or grants.</td>
+            </tr>
+            <tr>
+                <th>How does the FAFSA determine my eligibility for financial aid?</th>
+                <td>The FAFSA uses a formula known as the Expected Family Contribution (EFC) to determine your eligibility for federal student aid. The EFC is calculated based on information you provide about your and your family's income, assets, and other factors.</td>
+            </tr>
+            <tr>
+                <th>Can I submit the FAFSA online or do I have to mail in a paper copy?</th>
+                <td>You can submit the FAFSA online at the <a href="https://studentaid.gov/h/apply-for-aid/fafsa">Federal Student Aid</a> website. This is the quickest and easiest way to submit the FAFSA and is recommended by the Department of Education. </td>
+            </tr>
+            <tr>
+                <th>Can I still receive federal financial aid if I have a criminal record?</th>
+                <td>Having a criminal record does not automatically disqualify you from receiving federal student aid. However, certain drug-related convictions may impact your eligibility for financial aid.</td>
+            </tr>
+            <tr>
+                <th>How will I receive the financial aid I'm awarded?</th>
+                <td>Financial aid is typically disbursed directly to the school you're attending and applied to your tuition, fees, and other educational expenses. You may receive the remaining funds as a refund to use for other educational expenses or living expenses.</td>
+            </tr>
+        </table>
+        <!--Java script function for search bar-->
+        <script>
+            function searchTable() {
+                var input, filter, found, table, tr, td, i, j;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("table");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td");
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            found = true;
+                        }
+                    }
+                    if (found) {
+                        tr[i].style.display = "";
+                        found = false;
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
+    </body>
+</html>
