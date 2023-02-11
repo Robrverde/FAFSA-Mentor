@@ -3,25 +3,38 @@
     <head>
     <title>FAFSA Mentor</title>
     <meta name="description" content="Our first page">
+    <link rel="stylesheet" href="css/styles.css">
     </head>
     <style>
         table, th, td {
           border:1px solid black;
         }
+        button {
+            background-color: rgb(0, 24, 46);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
     </style>
     <body>
-        <h1>General Questions</h1>
-        <input id='search' onkeyup='searchTable()' type='text' placeholder="Type to search">
+        <header style = "background-color: rgb(0, 24, 46); width:100%;">
+            <h1 style="color: white; text-align: left; font-size: 30px; margin-top: 0%;">
+                General Questions
+            </h1>
+        </header>
+        <input id='search' onkeyup='searchTable()' type='text' placeholder="Type to search" style="background-color: rgb(243, 229, 171);">
         <br>
         <br>
         <table id="table">
             <tr>
                 <th>Question</th>
                 <th>Answer</th>
-            </tr>
-            <tr>
-                <th>What is FAFSA?</th>
-                <td>The Free Application for Federal Student Aid (FAFSA) is a form used by the U.S. Department of Education to determine a student's eligibility for federal student aid, which can include grants, loans, and work-study programs.</td>
             </tr>
             <tr>
                 <th>Why should I apply for the FAFSA?</th>
@@ -96,5 +109,8 @@
                 }
             }
             </script>
+            <footer style="text-align: center; margin-top: 20px;">
+                <button onclick="history.back()">return</button>  
+            </footer>
     </body>
 </html>
