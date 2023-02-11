@@ -9,8 +9,12 @@
         <p>FAFSA Mentor is the place where you can find all information related to how to take advantage of the Free Application for Federal Student Aid (FAFSA). </p>
         <button>Cheat Sheet</button><br>
         <button>Most Asked Questions</button><br>
-        <button>Important Deadlines</button>
+        <button id="calendar" class="float-left submit-button">Important Deadlines</button>
 
-        
+        <script type="text/javascript">
+            document.getElementById("calendar").onclick = function () {
+                location.href = "calendar.html";
+            };
+        </script>
     </body>
 </html>
