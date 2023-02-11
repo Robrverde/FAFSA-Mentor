@@ -29,8 +29,9 @@
             text-align: left;
         }
     </style>
+    <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body style="background-color: rgb(195, 225, 220); margin:0;">
+    <body>
         <header style = "background-color: rgb(0, 24, 46); width:100%;">
             <h1 style="color: white; text-align: center; font-size: 50px; margin-top: 0%;">
                 FAFSA Mentor
@@ -53,7 +54,7 @@
             </ul>
             <button>Glossary/Cheat Sheet</button>
             <button id="questions" class="float-left submit-button">Most Asked Questions</button>
-            <button id="calendar" class="float-left submit-button">Important Deadlines</button>
+            <button id="calendar" class="float-left submit-button">Important Deadlines</button>  
         </div>
 
         <script type="text/javascript">
@@ -63,9 +64,9 @@
         </script>
 
         <script type="text/javascript">
-        document.getElementById("questions").onclick = function () {
-            location.href = "questions.html";
-        };
+            document.getElementById("questions").onclick = function () {
+                location.href = "questions.html";
+            };
         </script>
     </body>
     
