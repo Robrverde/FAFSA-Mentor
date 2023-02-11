@@ -4,12 +4,20 @@
     <title>FAFSA Mentor</title>
     <meta name="description" content="Our first page">
     </head>
-    <body>
-        <h1>FAFSA Mentor</h1>
-        <p>FAFSA Mentor is the place where you can find all information related to how to take advantage of the Free Application for Federal Student Aid (FAFSA). </p>
-        <button>Cheat Sheet</button><br>
-        <button id="questions" class="float-left submit-button">Most Asked Questions</button><br>
-        <button id="calendar" class="float-left submit-button">Important Deadlines</button>
+    <!--Dark Blue rgb(0, 24, 46);-->
+    <!--Light Blue rgb(195, 225, 220);-->
+    <body style="background-color: rgb(195, 225, 220); margin:0;">
+        <header style = "background-color: rgb(0, 24, 46); width:100%;">
+            <h1 style="color: white; text-align: center; font-size: 50px; margin-top: 0%;">
+                FAFSA Mentor
+            </h1>
+        </header>
+        <div style = "padding-left: 10px;">
+            <p>FAFSA Mentor is the place where you can find all information related to the Free Application for Federal Student Aid (FAFSA). </p>
+            <button>Cheat Sheet</button><br>
+            <button id="questions" class="float-left submit-button">Most Asked Questions</button><br>
+            <button id="calendar" class="float-left submit-button">Important Deadlines</button>
+        </div>
 
         <script type="text/javascript">
             document.getElementById("calendar").onclick = function () {
@@ -23,4 +31,5 @@
         };
         </script>
     </body>
+    
 </html>
