@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+    <title>FAFSA Mentor</title>
+    <meta name="description" content="Our first page">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+    <body>
+        <header style = "background-color: rgb(0, 24, 46); width:100%;">
+            <h1 style="color: white; text-align: left; font-size: 30px; margin-top: 0%;">
+                Glossary/Cheat Sheet
+            </h1>
+        </header>
+        <input id='search' onkeyup='searchTable()' type='text' placeholder="Type to search" style="background-color: rgb(243, 229, 171);">
+        <br>
+        <br>
+        <table id="table">
+            <tr>
+                <th>Key Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <th>Academic Year</th>
+                <td>The period of time that covers one school term, usually from August/September to May/June. The FAFSA is typically based on the academic year for which you are seeking financial aid.</td>
+            </tr>
+            <tr>
+                <th>Adjusted Gross Income (AGI)</th>
+                <td>AGI is your total taxable income for the year, minus certain adjustments. You will need to provide information about your AGI when filling out the FAFSA.</th>
+            </tr>
+            <tr>
+                <th>Asset Information</th>
+                <td>Information you may be required to provide about your and your parents' assets, including savings and checking accounts, stocks, and real estate.</td>
+            </tr>
+            <tr>
+                <th>Cost of Attendance (COA)</th>
+                <td>The total estimated cost of attending a college or university, including tuition and fees, room and board, books and supplies, transportation, and other expenses.</td>
+            </tr>
+            <tr>
+                <th>CSS Profile</th>
+                <td>A financial aid form used by some colleges and universities to determine eligibility for institutional aid.</th>
+            </tr>
+            <tr>
+                <th>Dependent Student</th>
+                <td>A student who is financially dependent on their parents and is expected to provide information about their parents' financial situation on the FAFSA.</td>
+            </tr>
+            <tr>
+                <th>Direct Subsidized Loan</th>
+                <td>A type of federal student loan for which the government pays the interest while the borrower is in school at least half-time, during the grace period, and during deferment periods.</td>
+            </tr>
+            <tr>
+                <th>Direct Unsubsidized Loan</th>
+                <td>A type of federal student loan for which the borrower is responsible for paying all interest, even while in school.</td>
+            </tr>
+            <tr>
+                <th>Educational Tax Credits</th>
+                <td>Tax credits that help reduce the amount of federal tax owed, such as the American Opportunity Tax Credit and the Lifetime Learning Credit.</td>
+            </tr>
+            <tr>
+                <th>EFC (Expected Family Contribution)</th>
+                <td>The amount of money that the government expects your family to contribute towards your college education, based on information you provide on the FAFSA.</td>
+            </tr>
+            <tr>
+                <th>Federal Direct Loan</th>
+                <td>A type of student loan that's provided by the federal government and has a low fixed interest rate.</td>
+            </tr>
+            <tr>
+                <th>Federal Pell Grant</th>
+                <td>A type of financial aid awarded to undergraduate students who demonstrate financial need.</td>
+            </tr>
+            <tr>
+                <th>Federal Student Aid Programs</th>
+                <td>Programs funded by the federal government that provide financial aid to students, including grants, loans, and work-study.</td>
+            </tr>
+            <tr>
+                <th>Federal Work-Study (FWS)</th>
+                <td>A federal program that provides part-time jobs for students with financial need, allowing them to earn money to help pay for their education</td>
+            </tr>
+            <tr>
+                <th>FSA ID</th>
+                <td>A username and password combination that you use to sign the FAFSA electronically and access your financial aid information online.</td>
+            </tr>
+            <tr>
+                <th>Grant</th>
+                <td>Financial aid that does not need to be repaid, typically based on financial need.</td>
+            </tr>
+            <tr>
+                <th>Independent Student</th>
+                <td>A student who is financially independent and is not required to provide information about their parents' financial situation on the FAFSA.</td>
+            </tr>
+            <tr>
+                <th>Income Tax Return Transcript</th>
+                <td>A transcript of your tax return that you can request from the Internal Revenue Service (IRS) to use as documentation for your FAFSA.</td>
+            </tr>
+            <tr>
+                <th>IRS (Internal Revenue Service)</th>
+                <td>The IRS is the government agency responsible for collecting taxes in the United States. You will need to provide information from your most recent tax return when completing the FAFSA.</td>
+            </tr>
+            <tr>
+                <th>Parent PLUS Loan</th>
+                <td>A type of federal loan that parents of dependent undergraduate students can take out to help pay for their child's education.</td>
+            </tr>
+            <tr>
+                <th>Private Student Loan</th>
+                <td>A loan from a private lender, such as a bank, credit union, or state agency, to help pay for college expenses.</td>
+            </tr>
+            <tr>
+                <th>Renewal FAFSA</th>
+                <td>A simplified version of the FAFSA that you can complete if you are returning to college and have already filled out a FAFSA in the past.</td>
+            </tr>
+            <tr>
+                <th>SAP (Satisfactory Academic Progress)</th>
+                <td>The standard a student must meet in order to maintain eligibility for financial aid. This typically includes maintaining a minimum GPA and completing a certain number of credits per semester.</td>
+            </tr>
+            <tr>
+                <th>SAR (Student Aid Report)</th>
+                <td>This is a report generated by the Department of Education that summarizes the information you submitted on your FAFSA and shows your estimated eligibility for federal student aid</td>
+            </tr>
+            <tr>
+                <th>SSN (Social Security Number)</th>
+                <td>You will need to provide your Social Security Number (SSN) when filling out the FAFSA. Your SSN is used to verify your identity and track your financial aid history.</td>
+            </tr>
+        </table>
+        <!--Java script function for search bar-->
+        <script>
+            function searchTable() {
+                var input, filter, found, table, tr, td, i, j;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("table");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td");
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            found = true;
+                        }
+                    }
+                    if (found) {
+                        tr[i].style.display = "";
+                        found = false;
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
+            <footer style="text-align: center; margin-top: 20px;">
+                <button onclick="document.location='home.html'">return</button>  
+            </footer>
+    </body>
+</html>
